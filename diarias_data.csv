@@ -1,0 +1,25 @@
+Data,Dia_Semana,Mes,Ano,Valor_USD,Status_Pagamento,Local_Projeto,Observacoes,Data_Vencimento,Metodo_Pagamento
+2025-01-02,Quinta-feira,Janeiro,2025,250,A Pagar,Projeto Alpha,Reunião com cliente,2025-01-15,Transferência
+2025-01-03,Sexta-feira,Janeiro,2025,250,A Pagar,Projeto Alpha,Desenvolvimento,2025-01-15,Transferência
+2025-01-08,Quarta-feira,Janeiro,2025,250,Pago,Projeto Beta,Consultoria técnica,2025-01-20,PIX
+2025-01-09,Quinta-feira,Janeiro,2025,250,Pago,Projeto Beta,Treinamento equipe,2025-01-20,PIX
+2025-01-10,Sexta-feira,Janeiro,2025,250,A Pagar,Projeto Gamma,Análise de requisitos,2025-01-25,Transferência
+2025-01-15,Quarta-feira,Janeiro,2025,250,A Pagar,Projeto Alpha,Implementação,2025-01-30,Transferência
+2025-01-16,Quinta-feira,Janeiro,2025,250,Pago,Projeto Alpha,Testes,2025-01-30,PIX
+2025-01-17,Sexta-feira,Janeiro,2025,250,A Pagar,Projeto Beta,Documentação,2025-02-05,Transferência
+2025-02-03,Segunda-feira,Fevereiro,2025,250,A Pagar,Projeto Delta,Kick-off meeting,2025-02-15,Transferência
+2025-02-04,Terça-feira,Fevereiro,2025,250,A Pagar,Projeto Delta,Planejamento,2025-02-15,Transferência
+2025-02-05,Quarta-feira,Fevereiro,2025,250,Pago,Projeto Epsilon,Consultoria,2025-02-20,PIX
+2025-02-06,Quinta-feira,Fevereiro,2025,250,Pago,Projeto Epsilon,Workshop,2025-02-20,PIX
+2025-02-10,Segunda-feira,Fevereiro,2025,250,A Pagar,Projeto Zeta,Análise técnica,2025-02-25,Transferência
+2025-02-11,Terça-feira,Fevereiro,2025,250,A Pagar,Projeto Zeta,Desenvolvimento,2025-02-25,Transferência
+2025-02-12,Quarta-feira,Fevereiro,2025,250,Pago,Projeto Eta,Code review,2025-03-01,PIX
+2025-02-13,Quinta-feira,Fevereiro,2025,250,A Pagar,Projeto Eta,Refatoração,2025-03-01,Transferência
+2025-03-03,Segunda-feira,Março,2025,250,A Pagar,Projeto Theta,Arquitetura,2025-03-15,Transferência
+2025-03-04,Terça-feira,Março,2025,250,A Pagar,Projeto Theta,Implementação,2025-03-15,Transferência
+2025-03-05,Quarta-feira,Março,2025,250,A Pagar,Projeto Iota,Consultoria,2025-03-20,Transferência
+2025-03-06,Quinta-feira,Março,2025,250,Pago,Projeto Iota,Treinamento,2025-03-20,PIX
+2025-03-10,Segunda-feira,Março,2025,250,A Pagar,Projeto Kappa,Análise,2025-03-25,Transferência
+2025-03-11,Terça-feira,Março,2025,250,A Pagar,Projeto Kappa,Desenvolvimento,2025-03-25,Transferência
+2025-03-12,Quarta-feira,Março,2025,250,Pago,Projeto Lambda,Review,2025-03-30,PIX
+2025-03-13,Quinta-feira,Março,2025,250,A Pagar,Projeto Lambda,Deploy,2025-03-30,Transferência

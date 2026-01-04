@@ -1,0 +1,25 @@
+Data,Dia_Semana,Mes,Ano,Valor_USD,Status_Pagamento,Local_Projeto
+2025-01-02,Quinta-feira,Janeiro,2025,250,A Pagar,Projeto Alpha
+2025-01-03,Sexta-feira,Janeiro,2025,250,A Pagar,Projeto Alpha
+2025-01-08,Quarta-feira,Janeiro,2025,250,Pago,Projeto Beta
+2025-01-09,Quinta-feira,Janeiro,2025,250,Pago,Projeto Beta
+2025-01-10,Sexta-feira,Janeiro,2025,250,A Pagar,Projeto Gamma
+2025-01-15,Quarta-feira,Janeiro,2025,250,A Pagar,Projeto Alpha
+2025-01-16,Quinta-feira,Janeiro,2025,250,Pago,Projeto Alpha
+2025-01-17,Sexta-feira,Janeiro,2025,250,A Pagar,Projeto Beta
+2025-02-03,Segunda-feira,Fevereiro,2025,250,A Pagar,Projeto Delta
+2025-02-04,Terça-feira,Fevereiro,2025,250,A Pagar,Projeto Delta
+2025-02-05,Quarta-feira,Fevereiro,2025,250,Pago,Projeto Epsilon
+2025-02-06,Quinta-feira,Fevereiro,2025,250,Pago,Projeto Epsilon
+2025-02-10,Segunda-feira,Fevereiro,2025,250,A Pagar,Projeto Zeta
+2025-02-11,Terça-feira,Fevereiro,2025,250,A Pagar,Projeto Zeta
+2025-02-12,Quarta-feira,Fevereiro,2025,250,Pago,Projeto Eta
+2025-02-13,Quinta-feira,Fevereiro,2025,250,A Pagar,Projeto Eta
+2025-03-03,Segunda-feira,Março,2025,250,A Pagar,Projeto Theta
+2025-03-04,Terça-feira,Março,2025,250,A Pagar,Projeto Theta
+2025-03-05,Quarta-feira,Março,2025,250,A Pagar,Projeto Iota
+2025-03-06,Quinta-feira,Março,2025,250,Pago,Projeto Iota
+2025-03-10,Segunda-feira,Março,2025,250,A Pagar,Projeto Kappa
+2025-03-11,Terça-feira,Março,2025,250,A Pagar,Projeto Kappa
+2025-03-12,Quarta-feira,Março,2025,250,Pago,Projeto Lambda
+2025-03-13,Quinta-feira,Março,2025,250,A Pagar,Projeto Lambda

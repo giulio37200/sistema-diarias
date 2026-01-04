@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>💰 Sistema de Controle de Diárias - Completo</title>
+    
+    <!-- Estilos -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- ECharts para gráficos -->
+    <script src="https://cdn.jsdelivr.net/npm/echarts@5.4.3/dist/echarts.min.js"></script>
+    
+    <!-- Meta tags para SEO e compartilhamento -->
+    <meta name="description" content="Sistema completo de controle de diárias de alimentação com créditos antecipados, calendário interativo e dashboard">
+    <meta name="keywords" content="diárias, alimentação, controle, créditos, dashboard, calendário">
+    <meta name="author" content="Sistema de Diárias">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💰</text></svg>">
+    
+    <!-- Preload de fontes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div id="loading-screen" style="
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        z-index: 9999;
+        color: white;
+        font-family: 'Inter', sans-serif;
+    ">
+        <div style="
+            width: 80px;
+            height: 80px;
+            border: 4px solid rgba(255, 255, 255, 0.3);
+            border-top: 4px solid #4299e1;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin-bottom: 20px;
+        "></div>
+        <h2 style="margin: 0; font-size: 1.5rem; font-weight: 600;">💰 Carregando Sistema de Diárias</h2>
+        <p style="margin: 10px 0 0; opacity: 0.8;">Inicializando componentes...</p>
+        
+        <style>
+            @keyframes spin {
+                0% { transform: rotate(0deg); }
+                100% { transform: rotate(360deg); }
+            }
+        </style>
+    </div>
+
+    <!-- Container Principal da Aplicação -->
+    <div id="app-container">
+        <!-- O conteúdo será inserido via JavaScript -->
+    </div>
+
+    <!-- Scripts -->
+    <script src="data.js"></script>
+    <script src="app.js"></script>
+    
+    <!-- Script de inicialização -->
+    <script>
+        // Função para esconder loading screen
+        function hideLoadingScreen() {
+            const loadingScreen = document.getElementById('loading-screen');
+            if (loadingScreen) {
+                loadingScreen.style.opacity = '0';
+                loadingScreen.style.transition = 'opacity 0.5s ease-out';
+                setTimeout(() => {
+                    loadingScreen.style.display = 'none';
+                }, 500);
+            }
+        }
+
+        // Aguardar carregamento completo
+        window.addEventListener('load', function() {
+            // Aguardar um pouco para garantir que tudo foi inicializado
+            setTimeout(() => {
+                hideLoadingScreen();
+                console.log('🎉 Sistema de Diárias carregado completamente!');
+            }, 1000);
+        });
+
+        // Fallback caso algo dê errado
+        setTimeout(() => {
+            hideLoadingScreen();
+        }, 5000);
+
+        // Tratamento de erros globais
+        window.addEventListener('error', function(e) {
+            console.error('❌ Erro na aplicação:', e.error);
+            hideLoadingScreen();
+        });
+
+        // Verificação de compatibilidade
+        if (!window.localStorage) {
+            alert('⚠️ Seu navegador não suporta localStorage. Algumas funcionalidades podem não funcionar corretamente.');
+        }
+
+        if (!window.echarts) {
+            console.warn('⚠️ ECharts não carregado. Gráficos podem não funcionar.');
+        }
+
+        // Log de informações do sistema
+        console.log('📊 Sistema de Controle de Diárias');
+        console.log('🔧 Versão: 2.0.0');
+        console.log('📅 Data: ' + new Date().toLocaleDateString('pt-BR'));
+        console.log('🌐 Navegador:', navigator.userAgent);
+        console.log('📱 Dispositivo:', /Mobi|Android/i.test(navigator.userAgent) ? 'Mobile' : 'Desktop');
+    </script>
+
+    <!-- Service Worker para cache (opcional) -->
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', function() {
+                // Registrar service worker seria aqui
+                console.log('🔧 Service Worker disponível');
+            });
+        }
+    </script>
+
+    <!-- Analytics e monitoramento (placeholder) -->
+    <script>
+        // Aqui seria inserido código de analytics se necessário
+        console.log('📈 Sistema de monitoramento inicializado');
+    </script>
+
+    <!-- Mensagens de debug para desenvolvimento -->
+    <script>
+        // Verificar se está em modo de desenvolvimento
+        const isDevelopment = window.location.hostname === 'localhost' || 
+                             window.location.hostname === '127.0.0.1' ||
+                             window.location.hostname.includes('e2b.app');
+
+        if (isDevelopment) {
+            console.log('🔧 Modo de desenvolvimento ativo');
+            console.log('📋 Para debug, use: DiariasApp, DiariasSystem');
+            console.log('🎯 Comandos úteis:');
+            console.log('  - DiariasSystem.clearAllData() // Limpar todos os dados');
+            console.log('  - DiariasApp.updateAllDisplays() // Atualizar interface');
+            console.log('  - DiariasSystem.getCreditInfo() // Ver info de créditos');
+        }
+    </script>
+
+    <!-- Verificação de recursos necessários -->
+    <script>
+        // Verificar se todos os recursos foram carregados
+        document.addEventListener('DOMContentLoaded', function() {
+            const requiredElements = [
+                'app-container'
+            ];
+
+            const requiredObjects = [
+                'DiariasSystem',
+                'DiariasApp',
+                'echarts'
+            ];
+
+            let allGood = true;
+
+            // Verificar elementos DOM
+            requiredElements.forEach(id => {
+                if (!document.getElementById(id)) {
+                    console.error(`❌ Elemento necessário não encontrado: ${id}`);
+                    allGood = false;
+                }
+            });
+
+            // Verificar objetos JavaScript
+            requiredObjects.forEach(obj => {
+                if (!window[obj]) {
+                    console.error(`❌ Objeto necessário não encontrado: ${obj}`);
+                    allGood = false;
+                }
+            });
+
+            if (allGood) {
+                console.log('✅ Todos os recursos necessários foram carregados');
+            } else {
+                console.warn('⚠️ Alguns recursos podem estar faltando');
+            }
+        });
+    </script>
+
+    <!-- Tratamento de redimensionamento para gráficos -->
+    <script>
+        window.addEventListener('resize', function() {
+            if (window.DiariasApp && window.DiariasApp.charts) {
+                Object.values(window.DiariasApp.charts).forEach(chart => {
+                    if (chart && chart.resize) {
+                        chart.resize();
+                    }
+                });
+            }
+        });
+    </script>
+
+    <!-- Atalhos de teclado -->
+    <script>
+        document.addEventListener('keydown', function(e) {
+            // Ctrl + E = Exportar CSV
+            if (e.ctrlKey && e.key === 'e') {
+                e.preventDefault();
+                if (window.DiariasApp && window.DiariasApp.exportCSV) {
+                    window.DiariasApp.exportCSV();
+                }
+            }
+            
+            // Ctrl + T = Ir para hoje
+            if (e.ctrlKey && e.key === 't') {
+                e.preventDefault();
+                if (window.DiariasApp && window.DiariasApp.goToToday) {
+                    window.DiariasApp.goToToday();
+                }
+            }
+            
+            // Ctrl + D = Adicionar depósito (foco no campo)
+            if (e.ctrlKey && e.key === 'd') {
+                e.preventDefault();
+                const depositInput = document.getElementById('deposit-amount');
+                if (depositInput) {
+                    depositInput.focus();
+                }
+            }
+        });
+    </script>
+
+    <!-- Informações de ajuda -->
+    <script>
+        // Adicionar informações de ajuda no console
+        setTimeout(() => {
+            console.log('');
+            console.log('🆘 AJUDA - ATALHOS DE TECLADO:');
+            console.log('  Ctrl + E = Exportar CSV');
+            console.log('  Ctrl + T = Ir para hoje');
+            console.log('  Ctrl + D = Focar no campo de depósito');
+            console.log('');
+            console.log('💡 DICAS:');
+            console.log('  - Clique nos dias do calendário para adicionar/remover');
+            console.log('  - Clique novamente para alternar status (Pago/A Pagar)');
+            console.log('  - Use o modo deletar para remover dias específicos');
+            console.log('  - O sistema salva automaticamente no navegador');
+            console.log('');
+        }, 2000);
+    </script>
+</body>
+</html>
